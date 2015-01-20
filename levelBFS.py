@@ -207,25 +207,20 @@ class Level():
         """
         
         def findPath(graph,start):
-            create a queue Q
-            create a set V
+            openList = []
+            setV = set{}
             add start to V
             enqueue v onto Q
             while Q is not empty loop
                     t <- Q.dequeue()
                     if t is what we are looking for then
                             return t
-                    end if
                     for all edges e in graph.adjacentEdges(t) loop
                             u <- graph.adjacentVertex(t, e)
                             if u is not in V then
                                     add u to V
-                                    enqueue u onto graph420
-                            end if
-                    end loop
-            end loop
+                                    enqueue u onto graph
             return None
-        end findPath
     
     #print "No path :("
     #return None
